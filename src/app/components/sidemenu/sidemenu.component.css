@@ -1,0 +1,45 @@
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #cabebe;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
+}
+li{
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Active/current link */
+.sidebar a:hover {
+  background-color: #56907b;
+  color: white;
+}
+
+
+img
+{
+  width: 30%;
+  padding-top:15px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50%;
+}

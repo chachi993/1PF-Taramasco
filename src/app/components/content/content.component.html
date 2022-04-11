@@ -1,0 +1,49 @@
+<h2 appMyDirective>ABM de Alumnos</h2>
+<br>
+<br>
+ 
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-4">
+      <ul class="list-group">
+        <li
+        *ngFor="let alumno of alumnoArray"
+        class="list-group-item list-group-item-action"
+        (click) ="openForEdit(alumno)">
+        <span class="badge badge-primary" appMyDirective>{{alumno.id}}</span>
+         {{alumno.nombre }} - {{alumno.materia}}
+      </li>
+      </ul>
+      <div class="card mt-4">
+        <div class="card-body">
+          <div class="card-title">
+            Inserte un nuevo alumno:
+          </div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="selectedAlumno.nombre" placeholder="nombre" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="selectedAlumno.materia" placeholder="materia" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" [(ngModel)]="selectedAlumno.profesor" placeholder="profesor" class="form-control">
+      </div>
+        <button type="submit"
+         class="btn btn-primary"
+         (click)="addOrEdit()">Enviar</button>
+        <button
+         *ngIf= "selectedAlumno.id !== 0"
+         class="btn btn-danger"
+         (click)="delete()">Delete</button>
+    </div>
+   </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+
